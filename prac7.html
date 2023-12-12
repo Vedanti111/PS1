@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+ <title>Demonstrating Java script functions</title> 
+ <style>
+     body {
+          background-image: url('https://t3.ftcdn.net/jpg/04/12/82/16/360_F_412821610_95RpjzPXCE2LiWGVShIUCGJSktkJQh6P.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+ </style>
+</head> 
+<script> 
+ function findLMV(str){ 
+ for(i=0;i<str.length;i++){ 
+ if(str.charAt(i)=='a' || str.charAt(i)=='e' || str.charAt(i) 
+ =='i' || str.charAt(i)=='o' || str.charAt(i)=='u') 
+ return (i + 1); 
+ } 
+ return "Vowel is not present"; 
+ } 
+ function reverse(num){ 
+ rnum=0; temp = num; if(isNaN(num)){ 
+ return "invalid number"; 
+ } 
+ while(num != 0){ 
+ rnum*=10; rnum+=num%10; num-=num%10; num=Math.floor(num/10); 
+ } 
+ return rnum; 
+ } 
+</script> 
+<body> 
+ <section> 
+    <h1>Finding left most vowel</h1> 
+    <p>Enter a string: <input type=text id="t1"></p> 
+    <p>Output: <textarea style="height: 0.5cm;" id="t3"> 
+    </textarea> 
+    </p> 
+    <input type=button value=Find onclick= 'document.getElementById 
+    ("t3").value=findLMV(document.getElementById("t1").value)'> 
+    </section> 
+    <hr> 
+    <hr>
+    <section> 
+    <h1>Reverse of a number</h1> 
+    <p>Enter a number: <input type=text id="t2"></p> 
+    <p>Output: <textarea style="height: 0.5cm;" id="t4" > 
+    </textarea> 
+    </p> 
+    <input type=button value=Reverse onclick='document.getElementById 
+    ("t4").value=reverse(document.getElementById("t2").value)''> 
+    </section> 
+   </body> 
+   </html>
